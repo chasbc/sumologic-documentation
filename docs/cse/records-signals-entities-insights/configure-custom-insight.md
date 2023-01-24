@@ -70,3 +70,7 @@ To create a Custom Insight:
 
 1. If desired, select [Tags](tags-insights-signals-entities-rules.md) that you want assigned to the Custom Insight. 
 1. Click **Submit** to save your Custom Insight configuration.
+
+Note: Custom Insights are designed to automatically create Insights based on predefined Signal names or Rule triggers.  The custom insights can be configured to fire on any combination of signals in any or  exact order, but they must be common to a single entity.  When the custom insight triggers on the defined rule/signal name it will gather all other signals related to the entity for the detection window (default 14 days).
+
+A custom insight could fire across entities if a field were defined as a "Custom Entity" first.  For example, lateral movement of a threat/malware across entities could use the "Threat Name" field as the entity. And that entity could be used within rules that could then be used in custom insights.
